@@ -13,6 +13,9 @@
     "deploy": "git push heroku main",
     "postdeploy": "npm run migrate:production"
   },
+  "engines": {
+    "node": "12.19.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -26,8 +29,8 @@
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.95.4",
     "morgan": "^1.10.0",
-    "pg": "^8.5.1",
-    "postgrator-cli": "^4.0.0"
+    "pg": "^7.18.1",
+    "postgrator-cli": "^3.2.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
