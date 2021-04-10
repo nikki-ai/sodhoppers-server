@@ -1,4 +1,5 @@
 'use strict';
+const cors = require('cors');
 require('dotenv').config();
 const pg = require('pg');
 pg.defaults.ssl =
@@ -12,7 +13,7 @@ const db = knex({
   client: 'pg',
   connection: DATABASE_URL,
 });
-
+app.use(cors());
 app.set('db', db);
 
 app.listen(PORT, () => {
