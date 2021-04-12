@@ -16,7 +16,7 @@ cleanupRouter.route('/').post(json, async (req, res) => {
     req.app.get('db'),
     newCleanup
   );
-  res.status(201).json(newCleanup);
+  res.status(201).json(client);
 });
 
 module.exports = cleanupRouter;

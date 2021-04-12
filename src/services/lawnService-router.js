@@ -13,7 +13,7 @@ lawnServiceRouter.route('/').post(json, async (req, res) => {
   const category = 'potentialClients';
   const newLawn = { name, number, email, type, category };
   const client = await ClientsService.insertClient(req.app.get('db'), newLawn);
-  res.status(201).json(newLawn);
+  res.status(201).json(client);
 });
 
 module.exports = lawnServiceRouter;

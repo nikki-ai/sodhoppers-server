@@ -10,6 +10,7 @@
     "start": "node src/server.js",
     "predeploy": "npm audit",
     "migrate:production": "heroku run npm run migrate",
+    "migrate:test": "postgrator --config postgrator-config-test.js",
     "deploy": "git push heroku main",
     "postdeploy": "npm run migrate:production"
   },

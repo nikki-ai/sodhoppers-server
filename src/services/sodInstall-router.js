@@ -13,7 +13,7 @@ sodInstallRouter.route('/').post(json, async (req, res) => {
   const category = 'potentialClients';
   const newSod = { name, number, email, type, category };
   const client = await ClientsService.insertClient(req.app.get('db'), newSod);
-  res.status(201).json(newSod);
+  res.status(201).json(client);
 });
 
 module.exports = sodInstallRouter;
